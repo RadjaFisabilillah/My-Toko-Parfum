@@ -1,5 +1,7 @@
 /* src/app/globals.css (FULL CODE - Koreksi V4 Syntax) */
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /* MENGGANTIKAN @tailwind base */
 @import "tailwindcss/preflight";
 
