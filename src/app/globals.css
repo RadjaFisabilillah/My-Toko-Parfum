@@ -1,26 +1,17 @@
-@import "tailwindcss";
+/* src/app/globals.css (FULL CODE - Koreksi V4 Syntax) */
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* MENGGANTIKAN @tailwind base */
+@import "tailwindcss/preflight";
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* MENGGANTIKAN @tailwind components & @tailwind utilities */
+/* Dalam V4, components dan utilities digabungkan, dan seringkali hanya utilities yang digunakan */
+@tailwind utilities;
+/* Jika diperlukan, Anda mungkin perlu @import "tailwindcss/components"; secara eksplisit, 
+   tetapi mari kita coba dengan utilities dulu. */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Tambahkan gaya global kustom di sini jika diperlukan */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* @apply TIDAK dikenali jika Tailwind tidak dikompilasi dengan benar. 
+       Untuk sementara, kita gunakan properti CSS biasa. */
+  background-color: #f9fafb; /* Set background agar sesuai dengan Layout (bg-gray-50) */
 }
